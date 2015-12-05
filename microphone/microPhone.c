@@ -67,7 +67,7 @@ void micISR(void)
 
 	analogVal = get_ADC_Result();
 	if (current_number == sizeof(numbers) - 1) {
-		FILE* f = fopen("a.wav", "wb");
+		FILE* f = fopen("a.pcm", "wb");
 		fwrite(numbers, 1, sizeof(numbers), f);
 		fclose(f);
 		exit(0);
